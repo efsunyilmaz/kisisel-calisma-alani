@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev Ekle</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+    <header>
+        <div class="container header-icerik">
+            <h1>Kişisel Çalışma Alanı</h1>
+            <nav>
+                <ul>
+        <li><a href="index.html" class="aktif">Ana Sayfa</a></li>
+                    
+                    <li><a href="gorevler.html">Görevler</a></li>
+                    <li><a href="gorev-ekle.html">Görev +</a></li>
+                    <li><a href="ders-notu.html">Notlar</a></li>
+                    <li><a href="ders-notu-ekle.html">Not +</a></li>
+                    <li><a href="flashcard-ekle.html">Kartlar</a></li>
+                    <li><a href="flashcard-pratik.html">Kart +</a></li>
+    </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="kart">
+            <h2>Yeni Görev Oluştur</h2>
+            <form id="gorevFormu">
+                <p>
+                    <label for="dersadi">İlgili Ders</label>
+                    <input type="text" id="dersadi" name="dersadi" placeholder="ör: Ağ Tabanlı Programlama" required>
+                </p>
+                <p>
+                    <label for="gorevBasligi">Görev Başlığı</label>
+                    <input type="text" id="gorevBasligi" name="gorevBasligi" placeholder="ör: Drive'a 5 dakikalık video yükle" required>
+                </p>
+                <p>
+                    <label for="pomodoro">Odaklanma Süresi</label>
+                    <input type="number" id="pomodoro" name="pomodoro" min="1" required>
+                </p>
+                <p>
+                    <label for="kategori">Tür</label>
+                    <select id="kategori" name="kategori">
+                        <option value="calisma">Kişisel Çalışma</option>
+                        <option value="proje">Proje</option>
+                        <option value="odev">Ödev</option>
+                        <option value="vize">Vize</option>
+                        <option value="final">Final</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="aciklama">Not</label>
+                    <textarea id="aciklama" name="aciklama" rows="4"></textarea>
+                </p>
+                <button type="submit">Kaydet</button>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

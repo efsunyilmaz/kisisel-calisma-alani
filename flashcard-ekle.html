@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Ekle</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+    <header>
+        <div class="container header-icerik">
+            <h1>Kişisel Çalışma Alanı</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="aktif">Ana Sayfa</a></li>
+                    <li><a href="gorevler.html">Görevler</a></li>
+                    <li><a href="gorev-ekle.html">Görev +</a></li>
+                    <li><a href="ders-notu.html">Notlar</a></li>
+                    <li><a href="ders-notu-ekle.html">Not +</a></li>
+                    <li><a href="flashcard-ekle.html">Kartlar</a></li>
+                    <li><a href="flashcard-pratik.html">Kart +</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="kart">
+            <h2>Yeni Flashcard Ekle</h2>
+            <form id="flashcardFormu">
+                <p>
+                    <label for="dersadi">Ders</label>
+                    <input type="text" id="dersadi" name="dersadi" placeholder="ör: Veri Yapıları" required>
+                </p>
+                <p>
+                    <label for="onYuz">Kartın Ön Yüzü (Soru/Terim)</label>
+                    <input type="text" id="onYuz" name="onYuz" placeholder="ör: Struct yapısını tanımla" required>
+                </p>
+                <p>
+                    <label for="arkaYuz">Kartın Arka Yüzü (Cevap/Tanım)</label>
+                    <textarea id="arkaYuz" name="arkaYuz" rows="4"  required></textarea>
+                </p>
+                <button type="submit">Flashcard Ekle</button>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

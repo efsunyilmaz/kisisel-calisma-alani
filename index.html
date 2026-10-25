@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çalışma Alanım</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+    <header>
+        <div class="container header-icerik">
+            <h1>Kişisel Çalışma Alanı</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="aktif">Ana Sayfa</a></li>
+                    <li><a href="gorevler.html">Görevler</a></li>
+                    <li><a href="gorev-ekle.html">Görev +</a></li>
+                    <li><a href="ders-notu.html">Notlar</a></li>
+                    <li><a href="ders-notu-ekle.html">Not +</a></li>
+                    <li><a href="flashcard-ekle.html">Kartlar</a></li>
+                    <li><a href="flashcard-pratik.html">Kart +</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="kart">
+            <h2>Hoş geldin, bugünkü görevimiz ne?</h2>
+            <ul>
+                <li>Kendi planını yap, <strong>pomodoro</strong> teknikleriyle hedeflerini tamamla.</li>
+                <li>Kendi ders notunu ekle.</li>
+                <li>Kavramların akılda kalması için kendi <strong>Flashcard</strong>'ını oluştur.</li>
+            </ul>
+        </section>
+
+        <!-- İleride Backend'e bağlanacak statik istatistik vitrini -->
+        <section class="kart">
+            <h2>Haftalık İstatistik (Özet)</h2>
+            
+            <div class="istatistik-karti">
+                <div class="istatistik-baslik">
+                    <span>Görev Tamamlama</span>
+                    <span>%50 (7/14 Görev)</span>
+                </div>
+                <div class="progress-arkaplan">
+                    <div class="progress-dolu" style="width: 75%;"></div>
+                </div>
+            </div>
+
+            <div class="istatistik-karti">
+                <div class="istatistik-baslik">
+                    <span>Pomodoro Odaklanma (Hedef: 20)</span>
+                    <span>%40 (8 Pomodoro)</span>
+                </div>
+                <div class="progress-arkaplan">
+                    <div class="progress-dolu" style="width: 40%; background-color: var(--ana-renk);"></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <em>Başlamak bitirmenin yarısıdır.</em>
+        </footer>
+    </main>
+</body>
+</html>

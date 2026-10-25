@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --ana-renk: #5081bc; 
+    --vurgu-renk: #4338CA;
+    --zemin: #b4c7eb; 
+    --kart-zemin: #FFFFFF;
+    --metin: #1F2937;
+    --ikincil-metin: #4B5563;
+    --kenar: #E5E7EB;
+    --radius: 12px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--metin);
+    background-color: var(--zemin);
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+header {
+    background-color: var(--kart-zemin);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--kenar);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.header-icerik {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--ana-renk);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--ikincil-metin);
+    font-weight: 500;
+    padding: 8px 10px; 
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap; 
+}
+
+nav a:hover, nav a.aktif {
+    background-color: var(--ana-renk);
+    color: white;
+}
+
+main {
+    padding: 40px 0;
+}
+
+
+section, .kart {
+    background-color: var(--kart-zemin);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: var(--ana-renk);
+    margin-top: 0;
+    border-bottom: 2px solid var(--kenar);
+    padding-bottom: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--kart-zemin);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--kenar);
+}
+
+th {
+    background-color: var(--ana-renk);
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #F9FAFB;
+}
+
+
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: var(--ikincil-metin);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--kenar);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    background-color: #F9FAFB;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--ana-renk);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button {
+    background-color: var(--ana-renk);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--vurgu-renk);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--ikincil-metin);
+    padding: 20px 0;
+}
+
+
+.istatistik-karti {
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+.istatistik-baslik {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.progress-arkaplan {
+    background-color: var(--kenar);
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    margin-top: 8px;
+    overflow: hidden;
+}
+.progress-dolu {
+    background-color: #059669;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+.flashcard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+.flashcard {
+    background-color: transparent;
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    perspective: 1000px;
+}
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flashcard:hover .flashcard-inner {
+    transform: rotateY(180deg);
+}
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+.flashcard-front {
+    background-color: var(--kart-zemin);
+    border: 2px solid var(--ana-renk);
+    color: var(--metin);
+}
+.flashcard-front span {
+    font-size: 0.85rem;
+    color: var(--ikincil-metin);
+    margin-bottom: 10px;
+}
+.flashcard-back {
+    background-color: var(--ana-renk);
+    color: white;
+    transform: rotateY(180deg);
+}
